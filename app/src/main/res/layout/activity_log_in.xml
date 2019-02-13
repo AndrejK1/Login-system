@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/bg_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/default_margin">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="@dimen/default_padding"
+                android:layout_marginBottom="@dimen/default_padding"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_back"
+                android:onClick="buttonClick1"
+                android:contentDescription="@string/default_text" />
+
+            <TextView
+                android:id="@+id/registration_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:text="@string/login_text"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size_reg"
+                android:textColor="@color/reg_text_color"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/inp_reg_email1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:drawablePadding="@dimen/default_padding"
+                android:drawableStart="@drawable/icon_user_resize"
+                android:drawableLeft="@drawable/icon_user_resize"
+                android:backgroundTint="@color/reg_text_color"
+                android:hint="@string/reg_email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/reg_text_color"
+                android:textSize="@dimen/text_size_reg"
+                android:textColor="@color/reg_text_color" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/reg_text_color"
+                android:textColorHint="@color/reg_text_color"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/reg_text_color"
+                app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/inp_reg_password1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:drawablePadding="@dimen/default_padding"
+                android:drawableStart="@drawable/icon_lock_resize"
+                android:drawableLeft="@drawable/icon_lock_resize"
+                android:backgroundTint="@color/reg_text_color"
+                android:hint="@string/reg_password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/reg_text_color"
+                android:textSize="@dimen/text_size_reg"
+                android:textColor="@color/reg_text_color"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/login_button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_button"
+                android:textAlignment="center"
+                android:textColor="@color/buttons_text_color"
+                android:textSize="@dimen/text_size_button"
+                android:onClick="buttonClick1"
+                android:background="@drawable/round_button"/>
+
+            <TextView
+                android:id="@+id/lost_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/default_margin"
+                android:padding="@dimen/default_padding"
+                android:background="@android:color/transparent"
+                android:text="@string/pass_forgot"
+                android:textColor="@color/reg_text_color"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size_button"
+                android:textAllCaps="false"
+                android:onClick="buttonClick1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
